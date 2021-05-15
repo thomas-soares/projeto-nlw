@@ -1,0 +1,8 @@
+{
+  "name": "projeto-nlw",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/thomas-soares/projeto-nlw.git",
+  "author": "Thomas Soares <thomas__soares@hotmail.com>",
+  "license": "MIT"
+}
