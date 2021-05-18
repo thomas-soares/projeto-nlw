@@ -1,3 +1,5 @@
+import { Entity, Column, CreateDateColumn, UpdateDateColumn, PrimaryColumn } from 'typeorm';
+
 class Setting {
   id: string;
   username: string;
