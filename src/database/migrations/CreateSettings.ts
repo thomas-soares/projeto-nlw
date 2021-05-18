@@ -11,6 +11,25 @@ export class CreateSettings implements MigrationInterface {
                 name: "id",
                 type: "uuid",
                 isPrimary: true
+              },
+              {
+                name: "username",
+                type: "varchar"
+              },
+              {
+                name: "chat",
+                type: "boolean",
+                default: true
+              },
+              {
+                name: "updated_at",
+                type: "timestamp",
+                default: "now()"
+              },
+              {
+                name: "created_at",
+                type: "timestamp",
+                default: "now()"
               }
             ]
           })
