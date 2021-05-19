@@ -14,7 +14,11 @@ class Setting {
   @CreateDateColumn()
   created_at: Date;
 
-  
+  constructor() {
+    if (!this.id) {
+      this.id = uuid();
+    }
+  }
 }
 
 export { Setting }
