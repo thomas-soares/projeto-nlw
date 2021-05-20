@@ -6,6 +6,8 @@ import { SettingsRepository } from './repositories/SettingsRepository';
 const routes = Router();
 
 routes.post("/settings", async (request, response) => {
+  const { chat, username } = request.body;
+
   const settingsRepository = getCustomRepository(SettingsRepository);
 
   const settings = settingsRepository.create({
@@ -14,7 +16,7 @@ routes.post("/settings", async (request, response) => {
   });
 
   await settingsRepository.save(settings);
-  
+
 });
 
 export { routes };
