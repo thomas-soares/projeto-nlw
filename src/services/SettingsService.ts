@@ -1,10 +1,14 @@
+import { getCustomRepository } from "typeorm";
+import { SettingsRepository } from "../repositories/SettingsRepository";
+
 interface ISettingsCreate {
-  
+  chat: boolean
+  username: string;
 }
 
 class SettingsService {
 
-  async create() {
+  async create({ chat, username }: ISettingsCreate) {
     const settingsRepository = getCustomRepository(SettingsRepository);
   
     const settings = settingsRepository.create({
@@ -13,6 +17,8 @@ class SettingsService {
     });
   
     await settingsRepository.save(settings);
+
+    return settings;
   }
 };
 
