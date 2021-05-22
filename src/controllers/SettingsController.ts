@@ -14,7 +14,9 @@ class SettingsController {
       return response.json(settings);
       
     } catch (err) {
-      
+      return response.status(400).json({
+        message: err.message,
+      });
     }
   };
 };
