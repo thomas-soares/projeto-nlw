@@ -30,6 +30,14 @@ export class CreateMessages implements MigrationInterface {
             type: "timestamp",
             default: "now()"
           }
+        ],
+        foreignKeys: [
+          {
+            name: "FKUser",
+            referencedTableName: "users",
+            referencedColumnNames: ["id"],
+            columnNames: ["user_id"]
+          }
         ]
       })
     )
