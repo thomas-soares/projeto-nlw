@@ -1,0 +1,7 @@
+
+
+class MessagesService {
+
+};
+
+export { MessagesService };
