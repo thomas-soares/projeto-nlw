@@ -1,0 +1,8 @@
+
+
+
+class MessagesRepository {
+  
+};
+
+export { MessagesRepository };
