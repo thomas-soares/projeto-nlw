@@ -1,7 +1,8 @@
+import { Repository } from 'typeorm';
+import { Message } from '../entities/Message';
 
 
-
-class MessagesRepository {
+class MessagesRepository extends Repository<Message> {
   
 };
 
