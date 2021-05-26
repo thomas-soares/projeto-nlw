@@ -9,7 +9,7 @@ interface IMesssageCreate {
 
 class MessagesService {
 
-  async create() {
+  async create({ admin_id, text, user_id }: IMesssageCreate) {
     const messagesRepository = getCustomRepository(MessagesRepository);
 
     messagesRepository.create({
