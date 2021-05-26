@@ -8,15 +8,18 @@ interface IMesssageCreate {
 }
 
 class MessagesService {
-
   async create({ admin_id, text, user_id }: IMesssageCreate) {
     const messagesRepository = getCustomRepository(MessagesRepository);
 
-    messagesRepository.create({
+    const message = messagesRepository.create({
       admin_id,
       text,
       user_id
-    })
+    });
+
+    await MessagesRepository.save(message);
+
+    return message;
   }
 };
 
