@@ -9,6 +9,7 @@ import { routes } from './routes';
 const app = express();
 
 app.use(express.static(path.join(__dirname, "..", "public")));
+app.set("views", path.join(__dirname, "..", "public"));
 
 const http = createServer(app);
 const io = new Server(http);
