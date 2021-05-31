@@ -1,3 +1,9 @@
 document.querySelector("#start_chat").addEventListener("click", (event) => {
   const socket = io();
+
+  const chat_help = document.getElementById("chat_help");
+  chat_help.style.display = "none";
+
+  const chat_in_help = document.getElementById("chat_in_help");
+  chat_in_help.style.display = "block";
 });
