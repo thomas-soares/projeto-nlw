@@ -17,7 +17,16 @@ class ConnectionsService {
   }
 
   async create({ socket_id, user_id, admin_id, id }: IConnectionCreate) {
-    
+    const connection = this.connectionsRepository.create({
+      socket_id,
+      user_id,
+      admin_id,
+      id
+    });
+
+    await this.connectionsRepository.save(connection);
+
+    return connection;
   }
 };
 
