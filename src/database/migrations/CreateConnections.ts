@@ -7,9 +7,35 @@ export class CreateConnections implements MigrationInterface {
       new Table({
         name: "connections",
         columns: [
-          
+          {
+            name: "id",
+            type: "uuid",
+            isPrimary: true
+          },
+          {
+            name: "admin_id",
+            type: "uuid",
+            isNullable: true
+          },
+          {
+            name: "user_id",
+            type: "uuid",
+          },
+          {
+            name: "socket_id",
+            type: "varchar",
+          },
+          {
+            name: "created_at",
+            type: "timestamp",
+            default: "now()"
+          },
+          {
+            name: "updated_at",
+            type: "timestamp",
+            default: "now()"
+          }
         ],
-        
       })
     )
   }
