@@ -53,6 +53,7 @@ export class CreateConnections implements MigrationInterface {
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
+    await queryRunner.dropForeignKey("connections", "FKConnectionUser");
     await queryRunner.dropTable("connections");
   }
     
