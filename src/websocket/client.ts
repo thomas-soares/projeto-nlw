@@ -34,5 +34,11 @@ io.on("connect", (socket) => {
         await connectionsService.create(connection);
       }
     }
+
+    await messagesService.create({
+      text,
+      user_id
+    });
+    
   });
 });
