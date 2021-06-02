@@ -20,7 +20,11 @@ io.on("connect", (socket) => {
         user_id: user.id
       });
     } else {
-      
+
+      await connectionsService.create({
+        socket_id,
+        user_id: userExists.id
+      });
     }
   });
 });
