@@ -14,11 +14,13 @@ io.on("connect", (socket) => {
 
     if (!userExists) {
       const user = await usersService.create(email);
-    }
 
-    await connectionsService.create({
-      socket_id,
-      user_id
-    });
+      await connectionsService.create({
+        socket_id,
+        user_id: user.id
+      });
+    } else {
+      
+    }
   });
 });
