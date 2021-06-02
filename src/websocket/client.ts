@@ -6,6 +6,7 @@ import { MessagesService } from '../services/MessagesService';
 io.on("connect", (socket) => {
   const connectionsService = new ConnectionsService();
   const usersService = new UsersService();
+  const messagesService = new MessagesService();
 
   socket.on("client_first_access", async (params) => {
     const socket_id = socket.id;
