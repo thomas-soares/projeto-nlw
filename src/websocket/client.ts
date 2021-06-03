@@ -3,6 +3,11 @@ import { ConnectionsService } from '../services/ConnectionsService';
 import { UsersService } from '../services/UsersService';
 import { MessagesService } from '../services/MessagesService';
 
+interface IParams {
+  text: string;
+  email: string;
+}
+
 io.on("connect", (socket) => {
   const connectionsService = new ConnectionsService();
   const usersService = new UsersService();
