@@ -20,7 +20,16 @@ class MessagesService {
     await MessagesRepository.save(message);
 
     return message;
-  }
+  };
+
+  async listByUser(user_id: string) {
+    const list = await this.messageRepository.find({
+      where: { user_id },
+      relations: ["user"],
+    });
+
+    return list;
+  };
 };
 
 export { MessagesService };
