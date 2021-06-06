@@ -19,4 +19,6 @@ socket.on("admin_list_all_users", (connections) => {
 
 function call(id) {
   const user = connectionsUsers.find(connection => connection.socket_id === id);
+  const template = document.getElementById("admin_template").innerHTML;
+  
 }
