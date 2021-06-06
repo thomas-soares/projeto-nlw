@@ -16,3 +16,7 @@ socket.on("admin_list_all_users", (connections) => {
     document.getElementById("list_users").innerHTML += rendered;
   });
 });
+
+function call(id) {
+  const user = connectionsUsers.find(connection => connection.socket_id === id);
+}
