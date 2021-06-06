@@ -24,4 +24,6 @@ function call(id) {
     email: connection.user.email,
     id: connection.user_id
   });
+
+  document.getElementById("supports").innerHTML += rendered;
 }
