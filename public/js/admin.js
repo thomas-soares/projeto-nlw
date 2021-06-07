@@ -32,6 +32,6 @@ function call(id) {
   }
 
   socket.emit("admin_list_messages_by_user", params, (messages) => {
-    console.log("Messages", messages)
+    const divMessages = document.getElementById("div");
   });
 }
