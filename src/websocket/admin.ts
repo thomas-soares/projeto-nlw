@@ -9,7 +9,7 @@ io.on("connect", async (socket) => {
 
   io.emit("admin_list_all_users", allConnectionsWithoutAdmin);
 
-  socket.on("admin_list_messages_by_user", params => {
+  socket.on("admin_list_messages_by_user", async (params) => {
     const { user_id } = params;
 
     const allMessages = await messagesService.listByUser(user_id);
