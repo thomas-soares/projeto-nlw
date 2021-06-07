@@ -12,5 +12,6 @@ io.on("connect", async (socket) => {
   socket.on("admin_list_messages_by_user", params => {
     const { user_id } = params;
 
+    const allMessages = await messagesService.listByUser(user_id);
   });
 });
