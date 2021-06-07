@@ -1,3 +1,5 @@
+const { createDecipheriv } = require("node:crypto");
+
 const socket = io();
 let connectionsUsers = [];
 
@@ -33,5 +35,10 @@ function call(id) {
 
   socket.emit("admin_list_messages_by_user", params, (messages) => {
     const divMessages = document.getElementById("div");
+
+    messages.forEach(message => {
+      
+
+    });
   });
 }
