@@ -37,7 +37,7 @@ function call(id) {
     const divMessages = document.getElementById("div");
 
     messages.forEach(message => {
-      
+      const createDiv = document.createElement("div");
 
     });
   });
