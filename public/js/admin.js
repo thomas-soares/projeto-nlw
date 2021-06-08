@@ -50,6 +50,8 @@ function call(id) {
         createDiv.innerHTML = `Atendente: <span>${message.text}</span>`;
         createDiv.innerHTML = `<span class="admin_date">${dayjs(message.created_at).format("DD/MM/YYYY HH:mm:ss")}</span>`;
       }
+
+      divMessages.appendChild(createDiv);
     });
   });
 }
