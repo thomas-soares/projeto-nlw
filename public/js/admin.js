@@ -43,12 +43,12 @@ function call(id) {
         createDiv.className = "admin_message_client";
 
         createDiv.innerHTML = `<span>${connection.user.email} - ${message.text}</span>`;
-        createDiv.innerHTML = `<span class="admin_date">${dayjs(message.created_at).format("DD/MM/YYYY HH:mm:ss")}`;
+        createDiv.innerHTML = `<span class="admin_date">${dayjs(message.created_at).format("DD/MM/YYYY HH:mm:ss")}</span>`;
       } else {
         createDiv.className = "admin_message_admin";
 
-        createDiv.innerHTML = `Atendente: <span>${message.text}</span>`
-        createDiv.innerHTML = `<span class="admin_date">${dayjs(message.created_at).format("DD/MM/YYYY HH:mm:ss")}`
+        createDiv.innerHTML = `Atendente: <span>${message.text}</span>`;
+        createDiv.innerHTML = `<span class="admin_date">${dayjs(message.created_at).format("DD/MM/YYYY HH:mm:ss")}</span>`;
       }
     });
   });
