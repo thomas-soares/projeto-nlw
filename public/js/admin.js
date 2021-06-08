@@ -58,5 +58,10 @@ function call(id) {
 }
 
 function sendMessage(id) {
-  
+  const text = document.getElementById(`send_message_${id}`);
+  const params = {
+    text: text.nodeValue,
+    user_id: id
+  }
+
 }
