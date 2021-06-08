@@ -56,3 +56,7 @@ function call(id) {
     });
   });
 }
+
+function sendMessage(id) {
+  
+}
