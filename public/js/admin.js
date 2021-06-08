@@ -39,6 +39,12 @@ function call(id) {
     messages.forEach(message => {
       const createDiv = document.createElement("div");
 
+      if (message.admin_id === null) {
+        createDiv.className = "admin_message_client";
+      } else {
+        
+      }
+
     });
   });
 }
