@@ -41,6 +41,8 @@ function call(id) {
 
       if (message.admin_id === null) {
         createDiv.className = "admin_message_client";
+
+        createDiv.innerHTML = `<span>${connection.user.email} - ${message.text}</span>`
       } else {
         
       }
