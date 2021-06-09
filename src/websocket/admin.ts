@@ -22,6 +22,7 @@ io.on("connect", async (socket) => {
     await messagesService.create({
       text,
       user_id,
+      admin_id: socket.id
     });
   });
 });
