@@ -64,4 +64,6 @@ function sendMessage(id) {
     user_id: id
   }
 
+  socket.emit("admin_send_message", params);
+
 }
