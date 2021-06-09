@@ -1,7 +1,5 @@
-let socket = null;
-
 document.querySelector("#start_chat").addEventListener("click", (event) => {
-  socket = io();
+  const socket = io();
 
   const chat_help = document.getElementById("chat_help");
   chat_help.style.display = "none";
@@ -41,5 +39,9 @@ document.querySelector("#start_chat").addEventListener("click", (event) => {
         document.getElementById("messages").innerHTML += rendered;
       }
     });
+  });
+
+  socket.on("admin_send_to_client", (message) => {
+  
   });
 });
