@@ -14,6 +14,9 @@ io.on("connect", async (socket) => {
     const allMessages = await messagesService.listByUser(user_id);
 
     callback(allMessages);
+  });
+
+  socket.on("admin_send_message", params => {
 
   });
 });
