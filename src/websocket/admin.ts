@@ -17,6 +17,8 @@ io.on("connect", async (socket) => {
   });
 
   socket.on("admin_send_message", params => {
+    const { user_id, text } = params;
 
+    
   });
 });
