@@ -16,7 +16,7 @@ io.on("connect", async (socket) => {
     callback(allMessages);
   });
 
-  socket.on("admin_send_message", params => {
+  socket.on("admin_send_message", async (params) => {
     const { user_id, text } = params;
 
     await messagesService.create({
