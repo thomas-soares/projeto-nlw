@@ -27,6 +27,6 @@ io.on("connect", async (socket) => {
 
     const { socket_id } = await connectionsService.findByUserId(user_id);
 
-    
+    io.to(socket_id).emit("admin_send_to_client")
   });
 });
