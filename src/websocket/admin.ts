@@ -24,5 +24,9 @@ io.on("connect", async (socket) => {
       user_id,
       admin_id: socket.id
     });
+
+    const { socket_id } = await connectionsService.findByUserId(user_id);
+
+    
   });
 });
