@@ -66,4 +66,9 @@ function sendMessage(id) {
 
   socket.emit("admin_send_message", params);
 
+  const divMessages = document.getElementById(`allMessages${id}`);
+  const createDiv = document.createElement("div");
+
+  
+
 }
