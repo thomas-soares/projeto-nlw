@@ -47,5 +47,6 @@ document.querySelector("#start_chat").addEventListener("click", (event) => {
       message_admin: message.text
     });
 
+    document.getElementById("messages").innerHTML += rendered;
   });
 });
