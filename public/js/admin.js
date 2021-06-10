@@ -69,6 +69,8 @@ function sendMessage(id) {
   const divMessages = document.getElementById(`allMessages${id}`);
   const createDiv = document.createElement("div");
 
+  createDiv.className = "admin_message_admin";
+
   
 
 }
