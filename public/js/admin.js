@@ -74,4 +74,6 @@ function sendMessage(id) {
   createDiv.innerHTML += `<span class="admin_date">${dayjs().format("DD/MM/YYYY HH:mm:ss")}</span>`;
 
   divMessages.appendChild(createDiv);
+
+  text.value = "";
 }
