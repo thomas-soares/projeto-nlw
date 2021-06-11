@@ -55,4 +55,8 @@ io.on("connect", (socket) => {
 
     socket.emit("client_list_all_messages", allMessages);
   });
+
+  socket.on("client_send_to_admin", (params) => {
+    
+  });
 });
