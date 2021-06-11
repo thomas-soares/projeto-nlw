@@ -65,5 +65,5 @@ document.querySelector("#send_message_button").addEventListener("click", (event)
 
   socket.emit("client_send_to_admin", params);
 
-  const template_client = document.getElementById("message-user-template");
+  const template_client = document.getElementById("message-user-template").innerHTML;
 });
