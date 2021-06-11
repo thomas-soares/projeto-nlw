@@ -1,4 +1,5 @@
 let socket_admin_id = null;
+let emailUser = null;
 
 document.querySelector("#start_chat").addEventListener("click", (event) => {
   const socket = io();
@@ -10,6 +11,7 @@ document.querySelector("#start_chat").addEventListener("click", (event) => {
   chat_in_help.style.display = "block";
 
   const email = document.getElementById("email").value;
+  const emailUser = email;
   const text = document.getElementById("txt_help").value;
 
   socket.on("connect", () => {
