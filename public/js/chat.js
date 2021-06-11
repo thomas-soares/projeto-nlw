@@ -73,4 +73,6 @@ document.querySelector("#send_message_button").addEventListener("click", (event)
     message: text.value,
     email: emailUser
   });
+
+  document.getElementById("messages").innerHTML += rendered;
 });
