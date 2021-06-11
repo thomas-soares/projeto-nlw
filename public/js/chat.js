@@ -56,5 +56,5 @@ document.querySelector("#start_chat").addEventListener("click", (event) => {
 });
 
 document.querySelector("#send_message_button").addEventListener("click", (event) => {
-  
+  const text = document.getElementById("message_user");
 });
