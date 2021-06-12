@@ -67,7 +67,8 @@ io.on("connect", (socket) => {
     });
 
     io.to(socket_admin_id).emit("admin_receive_message", {
-      
+      message,
+      socket.id
     });
   });
 });
