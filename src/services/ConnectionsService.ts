@@ -46,8 +46,8 @@ class ConnectionsService {
     return connections;
   }
 
-  async findBySocketID(socket_is: string) {
-    
+  async findBySocketID(socket_id: string) {
+
   }
 };
 
