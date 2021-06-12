@@ -56,7 +56,7 @@ io.on("connect", (socket) => {
     socket.emit("client_list_all_messages", allMessages);
   });
 
-  socket.on("client_send_to_admin", (params) => {
+  socket.on("client_send_to_admin", async (params) => {
     const { text, socket_admin_id } = params;
     
     const { user_id } = await connectionsService.findBySocketID(socket.id);
