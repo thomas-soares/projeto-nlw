@@ -45,6 +45,10 @@ class ConnectionsService {
 
     return connections;
   }
+
+  async findBySocketID(socket_is: string) {
+    
+  }
 };
 
 export { ConnectionsService };
