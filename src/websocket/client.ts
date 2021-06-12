@@ -58,6 +58,8 @@ io.on("connect", (socket) => {
 
   socket.on("client_send_to_admin", (params) => {
     const { text, socket_admin_id } = params;
+    
+    const { user_id } = await connectionsService.findBySocketID(socket.id);
 
     const message = await messagesService.create({
       text,
