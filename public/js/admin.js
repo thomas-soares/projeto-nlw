@@ -87,4 +87,6 @@ socket.on("admin_receive_message", (data) => {
   createDiv.innerHTML = `<span>${connection.user.email}</span>`;
   createDiv.innerHTML += `<span>${params.message.text}</span>`;
   createDiv.innerHTML += `<span class="admin_date">${dayjs(params.message.created_at).format("DD/MM/YYYY HH:mm:ss")}</span>`;
+
+  divMessages.appendChild(createDiv);
 });
