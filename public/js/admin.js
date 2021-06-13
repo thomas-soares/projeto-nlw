@@ -79,6 +79,8 @@ function sendMessage(id) {
 }
 
 socket.on("admin_receive_message", (data) => {
+  const connection = connectionsUsers.find(connection => connection.socket_id = data.socket_id);
+
   createDiv.className = "admin_message_client";
 
   createDiv.innerHTML = `<span>${connection.user.email}</span>`;
